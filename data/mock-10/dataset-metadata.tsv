@@ -1,0 +1,13 @@
+name	mock-10
+citation	https://dx.doi.org/10.7287/peerj.preprints.934v2
+qiita-id	1975
+raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/ITS_SAG/
+human-readable-description	Fungal mock community
+bokulich2013-id	NA
+bokulich2015-id	F2
+target-gene	ITS
+target-subfragment	ITS1
+study-type	marker-gene
+sequencing-instrument	illumina-hiseq
+physical-specimen-available	No
+physical-specimen-contact	NA

@@ -1,0 +1,13 @@
+name	mock-1
+citation	doi:10.1038/nmeth.2276
+qiita-id	1687
+raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/S16S-1/
+human-readable-description	Bacterial mock community
+bokulich2013-id	dataset-5
+bokulich2015-id	B1
+target-gene	16S
+target-subfragment	V4
+study-type	marker-gene
+sequencing-instrument	illumina-hiseq
+physical-specimen-available	No
+physical-specimen-contact	NA

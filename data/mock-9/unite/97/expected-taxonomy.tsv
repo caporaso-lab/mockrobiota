@@ -1,0 +1,14 @@
+# Constructed from biom file
+#OTU ID	Mock.1	Mock.2	Mock.3	taxonomy
+Root;Ascomycota;Eurotiomycetes;Eurotiales;Trichocomaceae;Penicillium;Other	0.125	0.125	0.125
+Root;Ascomycota;Eurotiomycetes;Eurotiales;Trichocomaceae;Penicillium;Penicillium_commune	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Dipodascaceae;Galactomyces;Galactomyces_geotrichum	0.25	0.25	0.25
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Incertae_sedis;Candida;Candida_catenulata	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Pichiaceae;Pichia;Pichia_burtonii	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Pichiaceae;Pichia;Pichia_jadinii	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Pichiaceae;Pichia;Pichia_kudriavzevii	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Debaryomyces;Debaryomyces_hansenii	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Kluyveromyces;Kluyveromyces_lactis	0.0625	0.0625	0.0625
+Root;Ascomycota;Saccharomycetes;Saccharomycetales;Saccharomycetaceae;Zygosaccharomyces;Zygosaccharomyces_rouxii	0.0625	0.0625	0.0625
+Root;Ascomycota;Sordariomycetes;Hypocreales;Nectriaceae;Fusarium;Fusarium_domesticum	0.0625	0.0625	0.0625
+Root;Ascomycota;Sordariomycetes;Microascales;Microascaceae;Scopulariopsis;Other	0.0625	0.0625	0.0625

@@ -1,0 +1,13 @@
+name	mock-8
+citation	https://dx.doi.org/10.7287/peerj.preprints.934v2
+qiita-id	1973
+raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/Turnbaugh2/
+human-readable-description	Bacterial mock community
+bokulich2013-id	NA
+bokulich2015-id	B8
+target-gene	16S
+target-subfragment	V4
+study-type	marker-gene
+sequencing-instrument	illumina-hiseq
+physical-specimen-available	No
+physical-specimen-contact	NA

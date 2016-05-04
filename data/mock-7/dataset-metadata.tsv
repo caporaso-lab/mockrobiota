@@ -1,0 +1,13 @@
+name	mock-7
+citation	doi: 10.1016/j.cell.2012.10.052
+qiita-id	NA
+raw-data-direct-link	http://metagenomics.anl.gov/metagenomics.cgi?page=MetagenomeProject&project=1319
+human-readable-description	Bacterial mock community
+bokulich2013-id	NA
+bokulich2015-id	B7
+target-gene	16S
+target-subfragment	V4
+study-type	marker-gene
+sequencing-instrument	illumina-hiseq
+physical-specimen-available	No
+physical-specimen-contact	NA
