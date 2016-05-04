@@ -1,5 +1,4 @@
-# Constructed from biom file
-#OTU ID	MockHiSeq.even	MockMiSeq.even	Mock.even.phasedmiseq	taxonomy
+#Taxonomy	MockHiSeq.even	MockMiSeq.even	Mock.even.phasedmiseq
 D_0__Bacteria;D_1__Actinobacteria;D_2__Actinobacteria;D_3__Bifidobacteriales;D_4__Bifidobacteriaceae;D_5__Bifidobacterium;D_6__Bifidobacterium bifidum NCIMB 41171	0.00757575757576	0.00757575757576	0.00757575757576
 D_0__Bacteria;D_1__Actinobacteria;D_2__Actinobacteria;D_3__Bifidobacteriales;D_4__Bifidobacteriaceae;D_5__Bifidobacterium;D_6__Bifidobacterium pseudocatenulatum	0.00757575757576	0.00757575757576	0.00757575757576
 D_0__Bacteria;D_1__Actinobacteria;D_2__Coriobacteriia;D_3__Coriobacteriales;D_4__Coriobacteriaceae;D_5__Collinsella;Other	0.00757575757576	0.00757575757576	0.00757575757576

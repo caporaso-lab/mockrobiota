@@ -1,7 +1,7 @@
-name	mock-7
+name	value
 citation	doi: 10.1016/j.cell.2012.10.052
 qiita-id	NA
-raw-data-direct-link	http://metagenomics.anl.gov/metagenomics.cgi?page=MetagenomeProject&project=1319
+raw-data-url	http://metagenomics.anl.gov/metagenomics.cgi?page=MetagenomeProject&project=1319
 human-readable-description	Bacterial mock community
 bokulich2013-id	NA
 bokulich2015-id	B7

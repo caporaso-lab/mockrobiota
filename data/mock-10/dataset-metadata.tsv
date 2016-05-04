@@ -1,7 +1,7 @@
-name	mock-10
+name	value
 citation	https://dx.doi.org/10.7287/peerj.preprints.934v2
 qiita-id	1975
-raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/ITS_SAG/
+raw-data-url	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/ITS_SAG/
 human-readable-description	Fungal mock community
 bokulich2013-id	NA
 bokulich2015-id	F2

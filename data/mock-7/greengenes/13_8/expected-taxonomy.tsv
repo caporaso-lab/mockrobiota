@@ -1,5 +1,4 @@
-# Constructed from biom file
-#OTU ID	Even1	Even2	Even3	taxonomy
+#Taxonomy	Even1	Even2	Even3
 k__Bacteria;p__Actinobacteria;c__Actinobacteria;o__Bifidobacteriales;f__Bifidobacteriaceae;g__Bifidobacterium;s__	0.0488	0.0488	0.0488
 k__Bacteria;p__Actinobacteria;c__Actinobacteria;o__Bifidobacteriales;f__Bifidobacteriaceae;g__Bifidobacterium;s__adolescentis	0.0147	0.0147	0.0147
 k__Bacteria;p__Actinobacteria;c__Actinobacteria;o__Bifidobacteriales;f__Bifidobacteriaceae;g__Bifidobacterium;s__bifidum	0.0147	0.0147	0.0147

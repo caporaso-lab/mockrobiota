@@ -1,7 +1,7 @@
-name	mock-5
+name	value
 citation	 https://dx.doi.org/10.7287/peerj.preprints.934v2
 qiita-id	1972
-raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/Broad3/
+raw-data-url	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/Broad3/
 human-readable-description	Bacterial mock community
 bokulich2013-id	NA
 bokulich2015-id	B5

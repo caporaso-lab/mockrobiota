@@ -1,7 +1,7 @@
-name	mock-6
+name	value
 citation	doi: 10.1073/pnas.1000080107
 qiita-id	721+722
-raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/Turnbaugh1/
+raw-data-url	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/Turnbaugh1/
 human-readable-description	Bacterial mock community
 bokulich2013-id	dataset-1
 bokulich2015-id	B6
