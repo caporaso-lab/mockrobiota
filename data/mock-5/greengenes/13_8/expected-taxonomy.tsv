@@ -1,5 +1,4 @@
-# Constructed from biom file
-#OTU ID	HMPMockV1.1.Even1	HMPMockV1.1.Even2	HMPMockV1.2.Staggered1	HMPMockV1.2.Staggered2	taxonomy
+#Taxonomy	HMPMockV1.1.Even1	HMPMockV1.1.Even2	HMPMockV1.2.Staggered1	HMPMockV1.2.Staggered2
 k__Archaea;p__Euryarchaeota;c__Methanobacteria;o__Methanobacteriales;f__Methanobacteriaceae;g__Methanobrevibacter;s__	0.047593664	0.047593664	0.214316331	0.214316331
 k__Bacteria;p__Actinobacteria;c__Actinobacteria;o__Actinomycetales;f__Actinomycetaceae;g__Actinomyces;s__	0.047593664	0.047593664	0.000214316	0.000214316
 k__Bacteria;p__Actinobacteria;c__Actinobacteria;o__Actinomycetales;f__Propionibacteriaceae;g__Propionibacterium;s__acnes	0.047593664	0.047593664	0.002143163	0.002143163

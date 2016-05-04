@@ -1,7 +1,7 @@
-name	mock-2
+name	value
 citation	doi:10.1038/nmeth.2276
 qiita-id	1688
-raw-data-direct-link	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/S16S-2/
+raw-data-url	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/S16S-2/
 human-readable-description	Bacterial mock community
 bokulich2013-id	dataset-6
 bokulich2015-id	B2
