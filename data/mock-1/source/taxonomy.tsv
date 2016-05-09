@@ -1,0 +1,49 @@
+#Taxonomy	MockHiSeq.even	MockMiSeq.even	Mock.even.phasedmiseq
+Actinobacteria;Actinobacteria;Bifidobacteriales;Bifidobacteriaceae;Bifidobacterium;pseudocatenulatum;Bifidobacterium pseudocatenulatum	0.020833333	0.020833333	0.020833333
+Actinobacteria;Actinobacteria;Bifidobacteriales;Bifidobacteriaceae;Bifidobacterium;bifidum;Bifidobacterium bifidum	0.020833333	0.020833333	0.020833333
+Actinobacteria;Actinobacteria;Coriobacteriales;Coriobacteriaceae;Collinsella;intestinalis;Collinsella intestinalis	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Rikenellaceae;Alistipes;indistinctus;Alistipes indistinctus	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;ovatus;Bacteroides ovatus	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;uniformis;Bacteroides uniformis	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;cellulosilyticus;Bacteroides cellulosilyticus	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;thetaiotaomicron VPI-5482;Bacteroides thetaiotaomicron VPI-5482	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;vulgatus;Bacteroides vulgatus	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;thetaiotaomicron 3731;Bacteroides thetaiotaomicron 3731	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;thetaiotaomicron 7330;Bacteroides thetaiotaomicron 7330	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;xylanisolvens;Bacteroides xylanisolvens	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;intestinalis;Bacteroides intestinalis	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;eggerthii;Bacteroides eggerthii	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;dorei;Bacteroides dorei	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Bacteroidaceae;Bacteroides;finegoldii;Bacteroides finegoldii	0.020833333	0.020833333	0.020833333
+Bacteroidetes;Bacteroidia;Bacteroidales;Porphyromonadaceae;Parabacteroides;johnsonii;Parabacteroides johnsonii	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiales Family XI. Incertae Sedis;Anaerococcus;hydrogenalis;Anaerococcus hydrogenalis	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Ruminococcaceae;Anaerotruncus;colihominis;Anaerotruncus colihominis	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Lachnospiraceae;Blautia;luti;Blautia luti	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Lachnospiraceae;Blautia;hansenii;Blautia hansenii	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium; nexile-related A2-232;Clostridium nexile-related A2-232	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium; leptum;Clostridium leptum	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium;saccharolyticum-related;Clostridium saccharolyticum-related	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium;nexile;Clostridium nexile	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium;asparagiforme;Clostridium asparagiforme	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium;hathewayi;Clostridium hathewayi	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Clostridiaceae;Clostridium;sporogenes;Clostridium sporogenes	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Lachnospiraceae;Coprococcus;comes;Coprococcus comes	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Lachnospiraceae;Dorea;formicigenerans;Dorea formicigenerans	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Lachnospiraceae;Dorea;longicatena;Dorea longicatena	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium;eligens;Eubacterium eligens	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium;ventriosum;Eubacterium ventriosum	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Eubacteriaceae;Eubacterium;biforme;Eubacterium biforme	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Ruminococcaceae;Faecalibacterium;prausnitzii M21/2;Faecalibacterium prausnitzii M21/2	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Lachnospiraceae;Roseburia;intestinalis;Roseburia intestinalis	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Ruminococcaceae;Ruminococcus;gnavus;Ruminococcus gnavus	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Ruminococcaceae;Ruminococcus;lactaris;Ruminococcus lactaris	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Ruminococcaceae;Ruminococcus;torques;Ruminococcus torques	0.020833333	0.020833333	0.020833333
+Firmicute;Bacilli;Lactobacillales;Streptococcaceae;Streptococcus;infantarius;Streptococcus infantarius	0.020833333	0.020833333	0.020833333
+Firmicute;Clostridia;Clostridiales;Ruminococcaceae;Subdoligranulum;variabile;Subdoligranulum variabile	0.020833333	0.020833333	0.020833333
+Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Edwardsiella;tarda;Edwardsiella tarda	0.020833333	0.020833333	0.020833333
+Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Enterobacter;cancerogenus;Enterobacter cancerogenus	0.020833333	0.020833333	0.020833333
+Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Escherichia;coli K12;Escherichia coli K12	0.020833333	0.020833333	0.020833333
+Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Escherichia;fergusonii;Escherichia fergusonii	0.020833333	0.020833333	0.020833333
+Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Proteus;penneri;Proteus penneri	0.020833333	0.020833333	0.020833333
+Proteobacteria;Gammaproteobacteria;Enterobacteriales;Enterobacteriaceae;Providencia;alcalifaciens;Providencia alcalifaciens	0.020833333	0.020833333	0.020833333
+Verrucomicrobia;Verrucomicrobiae;Verrucomicrobiales;Verrucomicrobiaceae;Akkermansia;muciniphila;Akkermansia muciniphila	0.020833333	0.020833333	0.020833333

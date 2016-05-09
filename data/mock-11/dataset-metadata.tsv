@@ -1,0 +1,13 @@
+name	value
+citation	doi:10.1038/nmeth.2276
+qiita-id	1517
+raw-data-url	ftp://ftp.microbio.me/pub/illumina-mock-communities-raw-data/L18S-1/
+human-readable-description	Eukaryotic mock community
+bokulich2013-id	NA
+bokulich2015-id	F2
+target-gene	18S
+target-subfragment	18S
+study-type	marker-gene
+sequencing-instrument	illumina-hiseq
+physical-specimen-available	No
+physical-specimen-contact	NA
