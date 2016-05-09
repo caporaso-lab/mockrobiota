@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 
+import os
 import csv
+import sys
 import glob
 import os.path
 import unittest
 import urllib.error
 import urllib.request
 
+BAD_URLS_FP = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           'bad-urls.txt')
 
 # TODO clean up this code
 class CheckDataIntegrity(unittest.TestCase):
@@ -78,8 +82,15 @@ class CheckDataIntegrity(unittest.TestCase):
                 name, value = row
                 self.assertFalse(name in name_value_map,
                                  "Dataset metadata file %r: 'name' column must be unique, found duplicate cell %r" % (fp, name))
-                self.assertTrue(value,
-                                "Dataset metadata file %r: the value for %r cannot be empty (use NA instead)" % (fp, name))
+                required_values = ['raw-data-url']
+                if name in required_values:
+                    self.assertTrue(value,
+                                    "Dataset metadata file %r: the value for %r cannot be empty." % (fp, name))
+                    self.assertNotEqual(value, 'NA',
+                                        "Dataset metadata file %r: the value for %r cannot be NA." % (fp, name))
+                else:
+                    self.assertTrue(value,
+                                    "Dataset metadata file %r: the value for %r cannot be empty (use NA instead)" % (fp, name))
                 name_value_map[name] = value
 
             required_names = [
@@ -94,7 +105,9 @@ class CheckDataIntegrity(unittest.TestCase):
             try:
                 urllib.request.urlopen(raw_data_url)
             except urllib.error.URLError:
-                raise AssertionError("Dataset metadata file %r: cannot access raw data URL %r" % (fp, raw_data_url))
+                with open(BAD_URLS_FP, 'a') as f:
+                    f.write("%s : %s" % (fp, raw_data_url))
+                    f.write("\n")
 
     def _assert_valid_taxonomy_file(self, fp):
         with open(fp, newline='') as fh:
@@ -120,7 +133,7 @@ class CheckDataIntegrity(unittest.TestCase):
             for sample_id, column in zip(sample_ids, list(zip(*rows))[1:]):
                 column = [float(value) for value in column]
                 column_sum = sum(column)
-                self.assertAlmostEqual(column_sum, 1.0,
+                self.assertAlmostEqual(column_sum, 1.0, delta=0.001,
                         msg="Taxonomy file %r: sample ID %r must have taxa frequencies that sum to 1.0, not %r" % (fp, sample_id, column_sum))
 
             return taxonomy_column
@@ -141,4 +154,16 @@ class CheckDataIntegrity(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    test_program = unittest.main(exit=False)
+
+    if os.path.exists(BAD_URLS_FP):
+        sys.stderr.write('\nSome URLs could not be reached:\n')
+        with open(BAD_URLS_FP) as f:
+            bad_url_messages = f.read()
+        os.remove(BAD_URLS_FP)
+        sys.exit(bad_url_messages)
+
+    if test_program.result.wasSuccessful():
+        sys.exit(0)
+    else:
+        sys.exit(1)
