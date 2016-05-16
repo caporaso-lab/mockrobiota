@@ -13,6 +13,8 @@ BAD_URLS_FP = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                            'bad-urls.txt')
 
 # TODO clean up this code
+# TODO move file extant checks into _assert_* methods
+
 class CheckDataIntegrity(unittest.TestCase):
     def test_directory_structure(self):
         data_dir = os.path.join(
@@ -33,13 +35,14 @@ class CheckDataIntegrity(unittest.TestCase):
             sample_metadata_fp = os.path.join(dataset_dir, 'sample-metadata.tsv')
             self.assertTrue(os.path.isfile(sample_metadata_fp),
                             "Sample metadata %r does not exist" % sample_metadata_fp)
+            sample_ids = self._assert_valid_sample_metadata_file(sample_metadata_fp)
 
             source_dir = os.path.join(dataset_dir, 'source')
             if os.path.isdir(source_dir):
                 source_taxonomy_fp = os.path.join(source_dir, 'taxonomy.tsv')
                 self.assertTrue(os.path.isfile(source_taxonomy_fp),
                                 "Source taxonomy %r does not exist" % source_taxonomy_fp)
-                self._assert_valid_taxonomy_file(source_taxonomy_fp)
+                self._assert_valid_taxonomy_file(source_taxonomy_fp, sample_ids)
 
             db_dirs = []
             for path in glob.glob(os.path.join(dataset_dir, '*')):
@@ -59,13 +62,13 @@ class CheckDataIntegrity(unittest.TestCase):
                     self.assertTrue(os.path.isfile(expected_taxonomy_fp),
                                     "Expected taxonomy %r does not exist" % expected_taxonomy_fp)
 
-                    expected_taxonomy_column = self._assert_valid_taxonomy_file(expected_taxonomy_fp)
+                    expected_taxonomy_ids = self._assert_valid_taxonomy_file(expected_taxonomy_fp, sample_ids)
 
                     db_id_fp = os.path.join(db_version_dir,
                                             'database-identifiers.tsv')
                     if os.path.isfile(db_id_fp):
-                        db_id_taxonomy_column = self._assert_valid_database_id_file(db_id_fp)
-                        self._assert_compatible_taxonomy_columns(expected_taxonomy_fp, expected_taxonomy_column, db_id_fp, db_id_taxonomy_column)
+                        db_id_taxonomy_ids = self._assert_valid_database_id_file(db_id_fp)
+                        self._assert_compatible_taxonomy_ids(expected_taxonomy_fp, expected_taxonomy_ids, db_id_fp, db_id_taxonomy_ids)
 
     def _assert_valid_dataset_metadata_file(self, fp):
         with open(fp, newline='') as fh:
@@ -93,13 +96,15 @@ class CheckDataIntegrity(unittest.TestCase):
                                     "Dataset metadata file %r: the value for %r cannot be empty (use NA instead)" % (fp, name))
                 name_value_map[name] = value
 
-            required_names = [
+            required_names = {
                 'citation', 'qiita-id', 'raw-data-url',
                 'human-readable-description', 'bokulich2013-id',
                 'bokulich2015-id', 'target-gene', 'target-subfragment',
                 'study-type', 'sequencing-instrument',
-                'physical-specimen-available', 'physical-specimen-contact']
-            self.assertCountEqual(list(name_value_map.keys()), required_names)
+                'physical-specimen-available', 'physical-specimen-contact'}
+            present_names = set(name_value_map.keys())
+            self.assertTrue(required_names.issubset(present_names),
+                            "Dataset metadata file %r: missing the following required names: %r" % (fp, required_names - present_names))
 
             raw_data_url = name_value_map['raw-data-url']
             try:
@@ -109,7 +114,30 @@ class CheckDataIntegrity(unittest.TestCase):
                     f.write("%s : %s" % (fp, raw_data_url))
                     f.write("\n")
 
-    def _assert_valid_taxonomy_file(self, fp):
+    def _assert_valid_sample_metadata_file(self, fp):
+        with open(fp, newline='') as fh:
+            rows = list(csv.reader(fh, delimiter='\t'))
+            header = rows[0]
+            rows = rows[1:]
+
+            self.assertEqual(header[:3], ['#SampleID', 'BarcodeSequence', 'LinkerPrimerSequence'],
+                             "Sample metadata file %r: header must start with '#SampleID\\tBarcodeSequence\\tLinkerPrimerSequence'" % fp)
+
+            self.assertEqual(header[-1], 'Description',
+                             "Sample metadata file %r: header must end with 'Description' column" % fp)
+
+            sample_id_column = []
+            for row in rows:
+                self.assertEqual(len(row), len(header),
+                                 "Sample metadata file %r: each row must have the same number of cells as the header" % fp)
+                sample_id_column.append(row[0])
+            sample_ids = set(sample_id_column)
+            self.assertEqual(len(sample_id_column), len(sample_ids),
+                    "Sample metadata file %r: sample IDs must be unique" % fp)
+
+            return sample_ids
+
+    def _assert_valid_taxonomy_file(self, fp, expected_sample_ids):
         with open(fp, newline='') as fh:
             rows = list(csv.reader(fh, delimiter='\t'))
             header = rows[0]
@@ -118,16 +146,20 @@ class CheckDataIntegrity(unittest.TestCase):
             self.assertEqual(header[0], "#Taxonomy",
                     "Taxonomy file %r: top-left cell must be #Taxonomy, not %r" % (fp, header[0]))
 
-            sample_ids = header[1:]
-            self.assertEqual(len(sample_ids), len(set(sample_ids)),
+            sample_ids = set(header[1:])
+            self.assertEqual(len(header[1:]), len(sample_ids),
                     "Taxonomy file %r: sample IDs in taxonomy file must be unique" % fp)
+
+            self.assertEqual(sample_ids, expected_sample_ids,
+                             "Taxonomy file %r: sample IDs in taxonomy file must match sample IDs in sample metadata file (having the same order is not required)" % fp)
 
             taxonomy_column = []
             for row in rows:
                 self.assertEqual(len(row), len(header),
                                  "Taxonomy file %r: each row must have the same number of cells as the header" % fp)
                 taxonomy_column.append(row[0])
-            self.assertEqual(len(taxonomy_column), len(set(taxonomy_column)),
+            taxonomy_ids = set(taxonomy_column)
+            self.assertEqual(len(taxonomy_column), len(taxonomy_ids),
                     "Taxonomy file %r: taxonomy column values must be unique" % fp)
 
             for sample_id, column in zip(sample_ids, list(zip(*rows))[1:]):
@@ -136,21 +168,22 @@ class CheckDataIntegrity(unittest.TestCase):
                 self.assertAlmostEqual(column_sum, 1.0, delta=0.001,
                         msg="Taxonomy file %r: sample ID %r must have taxa frequencies that sum to 1.0, not %r" % (fp, sample_id, column_sum))
 
-            return taxonomy_column
+            return taxonomy_ids
 
     def _assert_valid_database_id_file(self, fp):
         with open(fp, newline='') as fh:
             rows = list(csv.reader(fh, delimiter='\t'))
 
             taxonomy_column = [row[0] for row in rows]
-            self.assertEqual(len(taxonomy_column), len(set(taxonomy_column)),
+            taxonomy_ids = set(taxonomy_column)
+            self.assertEqual(len(taxonomy_column), len(taxonomy_ids),
                     "Database identifiers file %r: taxonomy column values must be unique" % fp)
 
-            return taxonomy_column
+            return taxonomy_ids
 
-    def _assert_compatible_taxonomy_columns(self, fp1, column1, fp2, column2):
-        self.assertCountEqual(column1, column2,
-                              "Taxonomy columns in %r and %r must have the same values (having the same order is not required)" % (fp1, fp2))
+    def _assert_compatible_taxonomy_ids(self, fp1, ids1, fp2, ids2):
+        self.assertEqual(ids1, ids2,
+                         "Taxonomy columns in %r and %r must have the same values (having the same order is not required)" % (fp1, fp2))
 
 
 if __name__ == '__main__':
