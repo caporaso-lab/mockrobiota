@@ -1,2 +1,2 @@
-#SampleID	BarcodeSequence	LinkerPrimerSequence	Description
-EUK.Mock.1	CTCTGCCTAATT	CATGATCCTTCTGCAGGTTCACCTAC	Eukaryotic_Mock_Community
+#SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
+EUK.Mock.1	CTCTGCCTAATT	GTACACACCGCCCGTC	TGATCCTTCTGCAGGTTCACCTAC	1391f-EukBr	Eukaryotic_Mock_Community
