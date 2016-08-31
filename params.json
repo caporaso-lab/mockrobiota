@@ -1,6 +1,6 @@
 {
   "name": "Mockrobiota",
   "tagline": "A public resource for microbiome bioinformatics benchmarking.",
-  "body": "A public resource for microbiome bioinformatics benchmarking using artificially constructed (i.e., mock) communities.\r\n\r\n[Searchable inventory](https://github.com/caporaso-lab/mockrobiota/blob/issue-24/inventory.tsv) of mock communities.\r\n",
+  "body": "A public resource for microbiome bioinformatics benchmarking using artificially constructed (i.e., mock) communities.\r\n\r\n[Searchable inventory](https://github.com/caporaso-lab/mockrobiota/blob/master/inventory.tsv) of mock communities.\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
