@@ -145,10 +145,10 @@ class CheckDataIntegrity(unittest.TestCase):
 
             self.assertEqual(
                 header[:3],
-                ['#SampleID', 'BarcodeSequence', 'LinkerPrimerSequence'],
+                ['SampleID', 'BarcodeSequence', 'LinkerPrimerSequence'],
                 error_msg_prefix +
                 "header must start with "
-                "'#SampleID\\tBarcodeSequence\\tLinkerPrimerSequence'")
+                "'SampleID\\tBarcodeSequence\\tLinkerPrimerSequence'")
 
             self.assertEqual(header[-1], 'Description',
                              error_msg_prefix +
@@ -180,9 +180,9 @@ class CheckDataIntegrity(unittest.TestCase):
 
             self.assertEqual(
                 header[0],
-                "#Taxonomy",
+                "Taxonomy",
                 error_msg_prefix +
-                "top-left cell must be #Taxonomy, not %r" % header[0])
+                "top-left cell must be Taxonomy, not %r" % header[0])
 
             sample_ids = set(header[1:])
             self.assertEqual(len(header[1:]), len(sample_ids),

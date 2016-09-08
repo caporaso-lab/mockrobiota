@@ -1,2 +1,2 @@
-#SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
+SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
 MockHiSeq.even	TTCCAGGCAGAT	GTGCCAGCMGCCGCGGTAA	GGACTACHVGGGTWTCTAAT	515f-806r	Mocks

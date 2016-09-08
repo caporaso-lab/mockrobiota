@@ -1,3 +1,3 @@
-#SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
+SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
 sample1	TCCCTTGTCTCC	GTGTGCCAGCMGCCGCGGTAA	CCGGACTACHVGGGTWTCTAAT	515f-806r	first example
 sample2	ACGAGACTGATT	GTGTGCCAGCMGCCGCGGTAA	CCGGACTACHVGGGTWTCTAAT	515f-806r	second example
