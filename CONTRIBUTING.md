@@ -31,9 +31,9 @@ mockrobiota/
     └── example-1
         ├── dataset-metadata.tsv # dataset metadata
         ├── greengenes # database name
-        │   └── 13_8 # database version
-        │       ├── database-identifiers.tsv # database identifiers associated with each mock community member (optional)
-        │       └── expected-taxonomy.tsv # per-sample taxonomic abundances
+        │   └── 13_8 # database version
+        │       ├── database-identifiers.tsv # database identifiers associated with each mock community member (optional)
+        │       └── expected-taxonomy.tsv # per-sample taxonomic abundances
         ├── sample-metadata.tsv # QIIME-compatible mapping file
         └── source
             └── taxonomy.tsv # per-sample taxonomic abundances
@@ -51,16 +51,16 @@ The required fields are:
 
 * ``citation``: DOI, PubMed Identifier (PMID), or direct link for original citation.
 * ``qiita-id``: Study ID for raw data submitted to [QIITA database](https://qiita.ucsd.edu/).
-* ``raw-data-url``: Direct link to raw data submitted to other public repositories. A valid, working URL must be provided. ``NA`` is not a permitted value for this field.
+* ``raw-data-url``: Direct link to raw data submitted to other public repositories. A valid, working URL must be provided. ``NA`` is not a permitted value for this field. See information below about formatting and depositing raw data.
 * ``human-readable-description``: A description of the mock community dataset. At minimum, should include the number and types (bacterial, eukaryotic, archaeal, etc) of strains included in the mock community; the number of sample replicates; the investigators responsible for creating the mock community; and the main institution where this mock community was generated. Include as much relevant information as possible. If relevant, indicate the features that are common to or different across the samples included in the dataset (for example, if all are replicates of the same sample); the number of unique samples included; whether strains were mixed at even or uneven ratios; and whether the samples in this mock community are included in any other mock communities, and if so, whether those are marker-gene or metagenome mock communities (or another mock community type).
 * ``bokulich2013-id``: This only applies to the founder datasets included in mockrobiota, and indicates the mock community ID used in the [original citation](http://www.nature.com/nmeth/journal/v10/n1/abs/nmeth.2276.html). New mock communities should list ``NA`` as the value for this field.
 * ``bokulich2015-id``: This only applies to the founder datasets included in mockrobiota, and indicates the mock community ID used in the [original citation](https://dx.doi.org/10.7287/peerj.preprints.934v2). New mock communities should list ``NA`` as the value for this field.
-* ``target-gene``: The marker gene analyzed in this mock community dataset, for example, 16S, 18S, ITS.
-* ``target-subfragment``: The subregion of the marker gene analyzed. E.g., V4 (a subregion of 16S rRNA).
+* ``target-gene``: The marker gene analyzed in this mock community dataset, for example, 16S, 18S, ITS. For other study types, list NA.
+* ``target-subfragment``: The subregion of the marker gene analyzed. E.g., V4 (a subregion of 16S rRNA). For other study types, list NA.
 * ``study-type``: The type of study. Should be ``marker-gene`` or ``metagenome``. Other analysis types are theoretically possible. If submitting a mock community that is neither marker-gene sequences nor shotgun metagnome sequences, [create an issue](https://github.com/caporaso-lab/mockrobiota/issues) to confer with the mockrobiota developers before proceeding.
 * ``sequencing-instrument``: The sequencing method used for analysis, for example, ``illumina-hiseq``. We do not have an established naming convention here, but may make suggestions to help keep these consistent across data sets.
 * ``physical-specimen-available``: Does a physical specimen exist for this mock community and is it available for other investigators to request aliquots? Value should be ``Yes`` or ``No``.
-* ``physical-specimen-contact``: If the value for the ``physical-specimen-available`` is ``Yes``, this should be a contact email to which other investigators should direct their requests. Thank you for sharing your precious mock community resources with the mockrobiota community!
+* ``contact-email``: Provide a contact email to which other investigators should direct their questions and requests.
 
 ### ``sample-metadata.tsv``
 This file lists metadata for each individual sample contained in a mock community dataset, e.g., replicates of the same mock community or other mock communities included in the same sequencing run. This is a tab-separated text file, in [QIIME 1 mapping file format](http://qiime.org/documentation/file_formats.html#metadata-mapping-files). The [Keemei Google Sheets](http://keemei.qiime.org) plugin can be used to validate this file. The minimum requirements for marker-gene and metagenome mock communities are:
@@ -75,19 +75,29 @@ This file lists metadata for each individual sample contained in a mock communit
 ### ``source/taxonomy.tsv`` (optional)
 This file lists the taxonomic and (when possible) strain affiliation of each strain added to the mock community, as well as its relative abundance. This file does not need to adhere to a particular taxonomic reference database, but please include as much information as possible (e.g., if this strain is available through a public repository, please list the repository strain ID). This information is usually provided by the developer(s) of the mock community.
 
-This file must be in ["classic BIOM" (tab-separated text) format](#classic-biom-formatted-tables).
+In these files, the first line must begin with the text ``Taxonomy``, followed by a tab-separated list of one or more sample identifiers. All sample identifiers provided here must be present in ``sample-metadata.tsv``. Each subsequent line should begin with the taxonomic name, followed by a tab-separated list of the relative abundances in each sample. The relative abundances must sum to 1.000 (to three decimal places) for each sample. See [source taxonomy.tsv](./data/example-1/source/taxonomy.tsv) for an example file.
 
 ### Expected taxonomy (``database-name/database-version/expected-taxonomy.tsv``)
 Contains the known composition of the mock community (e.g., taxonomies or KEGG pathways), annotated according to a specific reference database. Compilation of expected composition data is not a trivial task, and requires careful review of database annotations to ensure that accurate annotations are applied to source data. See [Compiling expected taxonomy files](#compiling-expected-taxonomy-files) below for discussion of this topic.
 
-This file must be in ["classic BIOM" (tab-separated text) format](#classic-biom-formatted-tables).
+In these files, the first line must begin with the text ``Taxonomy``, followed by a tab-separated list of one or more sample identifiers. All sample identifiers provided here must be present in ``sample-metadata.tsv``. Each subsequent line should begin with the taxonomic name, followed by a tab-separated list of the relative abundances in each sample. The relative abundances must sum to 1.000 (to three decimal places) for each sample. See [example expected-taxonomy.tsv](./data/example-1/greengenes/13_8/expected-taxonomy.tsv) for an example file.
 
 ### Database identifiers (``database-name/database-version/database-identifiers.tsv``; optional)
 Contributors may provide database identifiers associated with each member of the mock community (useful, for example, for identifying associated sequences in the reference database). Each taxonomic name listed in the ``expected-taxonomy.tsv`` in the same directory must be included, and can have zero or more database identifiers associated with it. The taxonomic name and all database identifiers should be separated by tabs.
 
-## Classic BIOM-formatted tables
 
-Several files are described as being classic [biom-format](http://www.biom-format.org) tables. In these files, the first line must begin with the text ``#Taxonomy``, followed by a tab-separated list of one or more sample identifiers. All sample identifiers provided here must be present in ``sample-metadata.tsv``. Each subsequent line should begin with the taxonomic name, followed by a tab-separated list of the relative abundances in each sample. The relative abundances must sum to 1.000 (to three decimal places) for each sample.
+## Raw Data
+
+mockrobiota does not host raw data files (e.g., sequencing files). All sequencing data and other raw data files must be deposited on public, external websites. Stable, public depositories are preferred, but this requirement is not enforced by mockrobiota. mockrobiota ensures that valid, accessible links are provided in the dataset metadata (if not, integrity checks will fail and your dataset will not be accepted), but does not manage these external resources and can not guarantee the validity of raw data that are contributed by outside users. When preparing raw data for linking to mockrobiota datasets, please observe the following regulations:
+
+1. All raw sequence data should be deposited in .fastq format and archived using standard compression formats, e.g., .gz or .zip.
+2. Mock community datasets that contain multiple samples must be provided in non-demultiplexed files (i.e., one file per read direction per sequencing run, containing multiple uniquely barcoded samples). 
+3. Index/barcode sequences must be provided as a separate .fastq file. If QUAL scores do not exist for these reads, please note this in the human-readable-description field of dataset-metadata.tsv for that dataset.
+4. Reverse sequencing reads are accepted, but not required. Forward and reverse reads should be submitted as separate files, not as joined reads.
+5. All raw data must conform to the following naming conventions: 
+    - mock-forward-read.fastq.gz
+    - mock-reverse-read.fastq.gz (if applicable)
+    - mock-index-read.fastq.gz
 
 ## Submitting to mockrobiota
 mockrobiota is hosted on [GitHub](http://www.github.com), and we use GitHub's [Pull Request](https://help.github.com/articles/using-pull-requests) mechanism for reviewing and accepting submissions. On submission of a pull request, a series of tests will be run to confirm the integrity of the submitted data (as well as to re-test the integrity of all existing data). We require these tests to pass for your data set before we will merge it to ensure the overall integrity of the mockrobiota resource.
@@ -134,3 +144,4 @@ Several issues may arise during database annotation that require careful attenti
 * Taxonomy strings (or other annotations) for each strain match actual strings contained in the reference database used.
 * Reference database names and versions are correct.
 * Relative abundances of each strain sum to 1.000 (to three decimal places) for each sample in the mock community. Our automated data integrity checks will also test this.
+* dataset-metadata.tsv lists only valid, publicly accessible URLs.

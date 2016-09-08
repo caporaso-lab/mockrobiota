@@ -4,4 +4,4 @@
 
 A public resource for microbiome bioinformatics benchmarking using artifically constructed (i.e., mock) communities.
 
-[Searchable Inventory](https://github.com/caporaso-lab/mockrobiota/blob/issue-24/inventory.tsv) of mock communities.
+[Searchable Inventory](./inventory.tsv) of mock communities.
