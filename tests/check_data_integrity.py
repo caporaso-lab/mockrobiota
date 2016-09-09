@@ -116,22 +116,36 @@ class CheckDataIntegrity(unittest.TestCase):
                 name_value_map[name] = value
 
             required_names = {
-                'citation', 'qiita-id', 'raw-data-url',
+                'citation', 'qiita-id', 'raw-data-url-forward-read',
+                'raw-data-url-reverse-read', 'raw-data-url-index-read',
                 'human-readable-description', 'bokulich2013-id',
                 'bokulich2015-id', 'target-gene', 'target-subfragment',
                 'study-type', 'sequencing-instrument',
-                'physical-specimen-available', 'physical-specimen-contact'}
+                'physical-specimen-available', 'contact-email'}
             present_names = set(name_value_map.keys())
             self.assertTrue(required_names.issubset(present_names),
                             error_msg_prefix +
                             "missing the following required names: %r"
                             % (required_names - present_names))
 
-            raw_data_url = name_value_map['raw-data-url']
+            raw_data_url_forward = name_value_map['raw-data-url-forward-read']
             try:
-                urllib.request.urlopen(raw_data_url)
+                urllib.request.urlopen(raw_data_url_forward)
             except urllib.error.URLError:
-                BAD_URLS.append((fp, raw_data_url))
+                BAD_URLS.append((fp, raw_data_url_forward))
+
+            raw_data_url_index = name_value_map['raw-data-url-index-read']
+            try:
+                urllib.request.urlopen(raw_data_url_index)
+            except urllib.error.URLError:
+                BAD_URLS.append((fp, raw_data_url_index))
+
+            raw_data_url_reverse = name_value_map['raw-data-url-reverse-read']
+            if raw_data_url_reverse != 'NA':
+                try:
+                    urllib.request.urlopen(raw_data_url_reverse)
+                except urllib.error.URLError:
+                    BAD_URLS.append((fp, raw_data_url_reverse))
 
     def _assert_valid_sample_metadata_file(self, fp):
         error_msg_prefix = "Sample metadata file %r: " % fp

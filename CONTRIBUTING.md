@@ -51,7 +51,9 @@ The required fields are:
 
 * ``citation``: DOI, PubMed Identifier (PMID), or direct link for original citation.
 * ``qiita-id``: Study ID for raw data submitted to [QIITA database](https://qiita.ucsd.edu/).
-* ``raw-data-url``: Direct link to raw data submitted to other public repositories. A valid, working URL must be provided. ``NA`` is not a permitted value for this field. See information below about formatting and depositing raw data.
+* ``raw-data-url-forward-read``: Direct link to raw data **forward** sequences submitted to other public repositories. A valid, working URL must be provided. ``NA`` is not a permitted value for this field. See information below about formatting and depositing raw data.
+* ``raw-data-url-reverse-read``: Direct link to raw data **reverse** sequences submitted to other public repositories. This field is **optional** and if no reverse reads exist, list ``NA`` as the value for this field. See information below about formatting and depositing raw data.
+* ``raw-data-url-index-read``: Direct link to raw data **index** sequences (a.k.a. barcode reads) submitted to other public repositories. A valid, working URL must be provided. ``NA`` is not a permitted value for this field. See information below about formatting and depositing raw data.
 * ``human-readable-description``: A description of the mock community dataset. At minimum, should include the number and types (bacterial, eukaryotic, archaeal, etc) of strains included in the mock community; the number of sample replicates; the investigators responsible for creating the mock community; and the main institution where this mock community was generated. Include as much relevant information as possible. If relevant, indicate the features that are common to or different across the samples included in the dataset (for example, if all are replicates of the same sample); the number of unique samples included; whether strains were mixed at even or uneven ratios; and whether the samples in this mock community are included in any other mock communities, and if so, whether those are marker-gene or metagenome mock communities (or another mock community type).
 * ``bokulich2013-id``: This only applies to the founder datasets included in mockrobiota, and indicates the mock community ID used in the [original citation](http://www.nature.com/nmeth/journal/v10/n1/abs/nmeth.2276.html). New mock communities should list ``NA`` as the value for this field.
 * ``bokulich2015-id``: This only applies to the founder datasets included in mockrobiota, and indicates the mock community ID used in the [original citation](https://dx.doi.org/10.7287/peerj.preprints.934v2). New mock communities should list ``NA`` as the value for this field.
@@ -91,10 +93,10 @@ Contributors may provide database identifiers associated with each member of the
 mockrobiota does not host raw data files (e.g., sequencing files). All sequencing data and other raw data files must be deposited on public, external websites. Stable, public depositories are preferred, but this requirement is not enforced by mockrobiota. mockrobiota ensures that valid, accessible links are provided in the dataset metadata (if not, integrity checks will fail and your dataset will not be accepted), but does not manage these external resources and can not guarantee the validity of raw data that are contributed by outside users. When preparing raw data for linking to mockrobiota datasets, please observe the following regulations:
 
 1. All raw sequence data should be deposited in .fastq format and archived using standard compression formats, e.g., .gz or .zip.
-2. Mock community datasets that contain multiple samples must be provided in non-demultiplexed files (i.e., one file per read direction per sequencing run, containing multiple uniquely barcoded samples). 
+2. Mock community datasets that contain multiple samples must be provided in non-demultiplexed files (i.e., one file per read direction per sequencing run, containing multiple uniquely barcoded samples).
 3. Index/barcode sequences must be provided as a separate .fastq file. If QUAL scores do not exist for these reads, please note this in the human-readable-description field of dataset-metadata.tsv for that dataset.
 4. Reverse sequencing reads are accepted, but not required. Forward and reverse reads should be submitted as separate files, not as joined reads.
-5. All raw data must conform to the following naming conventions: 
+5. All raw data must conform to the following naming conventions:
     - mock-forward-read.fastq.gz
     - mock-reverse-read.fastq.gz (if applicable)
     - mock-index-read.fastq.gz
