@@ -29,6 +29,7 @@ All mock communities are contained in unique directories and assigned an identif
 mockrobiota/
 └── data
     └── example-1
+        ├── README.md # Description, information, and known issues/notes on dataset usage
         ├── dataset-metadata.tsv # dataset metadata
         ├── greengenes # database name
         │   └── 13_8 # database version
@@ -43,6 +44,11 @@ mockrobiota/
 
 
 Each mock community directory contains the following directories and file types:
+
+### ``README.md``
+Lists a description of the dataset to appear in that dataset's home directory. At a minimum, should replicate the ``human-readable-description`` field of [``dataset-metadata.tsv``](#dataset-metadatatsv), but ideally should be expanded to provide as much detail as possible. See [``example-1``](https://github.com/caporaso-lab/mockrobiota/tree/master/data/example-1/README.md) for an example.
+
+In addition, the ``Known issues/notes`` section serves as a place to list known issues and notes on usage provided by contributors or users. This is a place to report formatting quirks, issues with specific software, and general observations on the dataset and its constituent samples that will be of interest and re-use for future users. This is distinct from the [issues reporting page](https://github.com/caporaso-lab/mockrobiota/issues), where errors that critically prevent the use of specific materials in mockrobiota should be reported.
 
 ### ``dataset-metadata.tsv``
 Contains metadata for a mock community dataset, as well as links for downloading raw data. This file contains TAB-separated (key, value) pairs, with each (key, value) pair on a separate line and separated by a tab. Unless otherwise noted, you can provide ``NA`` to indicate that a required field is not applicable.
@@ -146,4 +152,5 @@ Several issues may arise during database annotation that require careful attenti
 * Taxonomy strings (or other annotations) for each strain match actual strings contained in the reference database used.
 * Reference database names and versions are correct.
 * Relative abundances of each strain sum to 1.000 (to three decimal places) for each sample in the mock community. Our automated data integrity checks will also test this.
-* dataset-metadata.tsv lists only valid, publicly accessible URLs.
+* ``dataset-metadata.tsv`` lists only valid, publicly accessible URLs.
+* A README.md file is provided, following the [``example``](https://github.com/caporaso-lab/mockrobiota/tree/master/data/example-1/README.md).
