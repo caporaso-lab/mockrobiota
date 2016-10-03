@@ -4,9 +4,6 @@ qiita-id	NA
 raw-data-url-forward-read	http://www.qiime.org
 raw-data-url-reverse-read	http://www.qiime.org
 raw-data-url-index-read	http://www.qiime.org
-human-readable-description	This is an example data set for software testing and documentation purposes.
-bokulich2013-id	NA
-bokulich2015-id	NA
 target-gene	16S
 target-subfragment	V4
 study-type	marker-gene

@@ -118,8 +118,7 @@ class CheckDataIntegrity(unittest.TestCase):
             required_names = {
                 'citation', 'qiita-id', 'raw-data-url-forward-read',
                 'raw-data-url-reverse-read', 'raw-data-url-index-read',
-                'human-readable-description', 'bokulich2013-id',
-                'bokulich2015-id', 'target-gene', 'target-subfragment',
+                'target-gene', 'target-subfragment',
                 'study-type', 'sequencing-instrument',
                 'physical-specimen-available', 'contact-email'}
             present_names = set(name_value_map.keys())
