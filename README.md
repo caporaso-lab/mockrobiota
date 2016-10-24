@@ -14,4 +14,8 @@ mockrobiota distributes metadata and other materials associated with mock commun
 We welcome and encourage new submissions to the mockrobiota family! :tada: If you have a mock community dataset that you would like to contribute, or wish to make changes/additions to any of the materials contained in mockrobiota, please review our [contributing guidelines](./CONTRIBUTING.md).
 
 ## Citing mockrobiota
-For now, please cite mockrobiota's [PeerJ Preprint](https://peerj.com/preprints/2065/) if you use any materials contained in mockrobiota. **Do not forget** to cite the original publication for any mock community dataset that you use (original citation information is contained in the ``dataset-metadata.tsv`` file, located in the [home directory of each dataset](https://github.com/caporaso-lab/mockrobiota/tree/master/data)).
+If you use any materials contained in mockrobiota, please cite [this article](http://msystems.asm.org/content/1/5/e00062-16.article-info):
+
+Bokulich NA, Rideout JR, Mercurio WG, Shiffer A, Wolfe B, Maurice CF, Dutton RJ, Turnbaugh PJ, Knight R, Caporaso JG. 2016. mockrobiota: a Public Resource for Microbiome Bioinformatics Benchmarking. mSystems 1 (5): e00062-16. DOI: 10.1128/mSystems.00062-16.
+
+**Do not forget** to cite the original publication for any mock community dataset that you use (original citation information is contained in the ``dataset-metadata.tsv`` file, located in the [home directory of each dataset](https://github.com/caporaso-lab/mockrobiota/tree/master/data)).
