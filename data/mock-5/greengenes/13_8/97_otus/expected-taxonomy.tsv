@@ -1,0 +1,21 @@
+Taxonomy	HMPMockV1.1.Even1	HMPMockV1.1.Even2	HMPMockV1.2.Staggered1	HMPMockV1.2.Staggered2
+k__Archaea; p__Euryarchaeota; c__Methanobacteria; o__Methanobacteriales; f__Methanobacteriaceae; g__Methanobrevibacter	0.0476190476	0.0476190476	0.2143622714	0.2143622714
+k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Neisseriales; f__Neisseriaceae; g__Neisseria	0.0476190476	0.0476190476	0.0021436229	0.0021436229
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Pseudomonadales; f__Pseudomonadaceae; g__Pseudomonas; s__aeruginosa	0.0476190476	0.0476190476	0.0214362274	0.0214362274
+k__Bacteria; p__Actinobacteria; c__Coriobacteriia; o__Coriobacteriales; f__Coriobacteriaceae; g__Enterococcus	0.0476190476	0.0476190476	0.0002143626	0.0002143626
+k__Bacteria; p__Firmicutes; c__Clostridia; o__Clostridiales; f__Lachnospiraceae; g__Clostridium	0.0476190476	0.0476190476	0.0214362274	0.0214362274
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Bacillales; f__Staphylococcaceae; g__Staphylococcus; s__epidermidis	0.0476190477	0.0476190477	0.0214362274	0.0214362274
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Bacillales; f__Bacillaceae; g__Bacillus; s__cereus	0.0476190476	0.0476190476	0.0214362274	0.0214362274
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus; s__agalactiae	0.0476190477	0.0476190477	0.2143622714	0.2143622714
+k__Bacteria; p__Proteobacteria; c__Epsilonproteobacteria; o__Campylobacterales; f__Helicobacteraceae; g__Helicobacter; s__pylori	0.0476190476	0.0476190476	0.0021436227	0.0021436227
+k__Bacteria; p__Bacteroidetes; c__Bacteroidia; o__Bacteroidales; f__Bacteroidaceae; g__Bacteroides	0.0476190476	0.0476190476	0.0002143626	0.0002143626
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__Enterobacteriales; f__Enterobacteriaceae; g__Escherichia; s__coli	0.0476190476	0.0476190476	0.2143622714	0.2143622714
+k__Bacteria; p__Actinobacteria; c__Actinobacteria; o__Actinomycetales; f__Actinomycetaceae; g__Actinomyces	0.0476190476	0.0476190476	0.0002143626	0.0002143626
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Streptococcaceae; g__Streptococcus	0.0952380954	0.0952380954	0.0216505900	0.0216505900
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Bacillales; f__Listeriaceae; g__Listeria; s__monocytogenes	0.0476190476	0.0476190476	0.0021436229	0.0021436229
+k__Bacteria; p__Actinobacteria; c__Actinobacteria; o__Actinomycetales; f__Propionibacteriaceae; g__Propionibacterium; s__acnes	0.0476190476	0.0476190476	0.0021436229	0.0021436229
+k__Bacteria; p__Proteobacteria; c__Betaproteobacteria; o__Burkholderiales; f__Alcaligenaceae; g__Rhodobacter; s__sphaeroides	0.0476190476	0.0476190476	0.0214362274	0.0214362274
+k__Bacteria; p__[Thermi]; c__Deinococci; o__Deinococcales; f__Deinococcaceae; g__Deinococcus	0.0476190476	0.0476190476	0.0002143626	0.0002143626
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Bacillales; f__Staphylococcaceae; g__Staphylococcus; s__aureus	0.0476190476	0.0476190476	0.2143622714	0.2143622714
+k__Bacteria; p__Proteobacteria; c__Gammaproteobacteria; o__HTCC2188; f__HTCC2089; g__Acinetobacter	0.0476190476	0.0476190476	0.0021436227	0.0021436227
+k__Bacteria; p__Firmicutes; c__Bacilli; o__Lactobacillales; f__Lactobacillaceae; g__Lactobacillus	0.0476190476	0.0476190476	0.0021436229	0.0021436229
