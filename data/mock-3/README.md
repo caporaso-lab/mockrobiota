@@ -7,8 +7,10 @@ Previously called dataset-2 in [Bokulich et al. 2013](https://dx.doi.org/10.1038
 #Known Issues / Notes
 
 Note:
-These barcode reads contain golay barcodes, and the mapping barcodes need to be reverse-complemented to match the reads. Run in qiime-1 using the following command:
-``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz --rev_comp_barcodes``
+These barcode reads contain golay barcodes, and the mapping barcodes are not reverse-complemented. Run in qiime-1 using the following command:
+``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz``
+
+The original QUAL scores for the index/barcode reads were not recovered, and thus mock-index-read.fastq.gz contains artificial index/barcode QUAL scores. QUAL scores from all other files are original.
 
 @wasade recommends trimming forward reads to 150nt prior to analysis. QUAL scores degrade rapidly at the 3' end, causing many reads to be filtered out if using default settings when using ``split_libraries_fastq.py`` in ``QIIME``.
 
