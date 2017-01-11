@@ -135,10 +135,11 @@ class CheckDataIntegrity(unittest.TestCase):
                 BAD_URLS.append((fp, raw_data_url_forward))
 
             raw_data_url_index = name_value_map['raw-data-url-index-read']
-            try:
-                urllib.request.urlopen(raw_data_url_index)
-            except urllib.error.URLError:
-                BAD_URLS.append((fp, raw_data_url_index))
+            if raw_data_url_index != 'NA':
+                try:
+                    urllib.request.urlopen(raw_data_url_index)
+                except urllib.error.URLError:
+                    BAD_URLS.append((fp, raw_data_url_index))
 
             raw_data_url_reverse = name_value_map['raw-data-url-reverse-read']
             if raw_data_url_reverse != 'NA':
