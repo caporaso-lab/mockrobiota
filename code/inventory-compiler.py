@@ -8,9 +8,8 @@
 # The full license is in the file LICENSE, distributed with this software.
 # ----------------------------------------------------------------------------
 
-from os.path import expandvars, join, isdir
+from os.path import join, isdir, dirname, abspath, split
 from os import listdir
-from glob import glob
 
 
 def generate_dataset_inventory(mockrobiota_dir):
@@ -92,17 +91,9 @@ def extract_mockrobiota_dataset_metadata(mockrobiota_dir, communities):
     return dataset_metadata_dict
 
 
-# How can we detect where mockrobiota is installed???
-mockrobiota_dir = expandvars('$HOME/Desktop/projects/mockrobiota/')
+# Find mockrobiota parent dir
+# mockrobiota_dir = expandvars('$HOME/Desktop/projects/mockrobiota/')
+mockrobiota_dir = split(dirname(abspath(__file__)))[0]
 
-# Generate list of dataset files that define inventory data. If these change,
-# generate a new inventory below.
-# Critical files are: dataset-metadata.tsv and sample-metadata.tsv
-dataset_files = glob(join(mockrobiota_dir, 'data', '*', '*.tsv'))
-
-# How to detect changes in current commit?
-# if changes with current commit include file in dataset_files:
-#   generate_dataset_inventory(mockrobiota_dir)
-
-# line below is for test purposes until ln 105 is resolved
+# Generate inventory
 generate_dataset_inventory(mockrobiota_dir)

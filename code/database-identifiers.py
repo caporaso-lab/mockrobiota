@@ -13,9 +13,9 @@ import sys
 import getopt
 
 
-usage = '''usage: autoannotate-taxa.py -i <source_fp>
-                                  -o <destination_dir>
-                                  -r <reference taxonomy>
+usage = '''usage: database-identifiers.py -i <source_fp>
+                                          -o <destination_dir>
+                                          -r <reference taxonomy>
 
     Generate database identifiers that match a list of expected taxonomies at
         species level. Expected taxonomies must be full-length taxonomy strings
