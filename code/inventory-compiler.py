@@ -33,7 +33,7 @@ def generate_dataset_inventory(mockrobiota_dir):
                   'human-readable-description']]
     for study_id in communities:
         # extract dataset metadata/params
-        metadata = 'https://github.com/caporaso-lab/mockrobiota/tree/master/data/{0}/sample-metadata.tsv'.format(study_id)
+        metadata = 'https://github.com/caporaso-lab/mockrobiota/tree/master/data/{0}/sample-metadata.tsv'.format(study_id)  # noqa
 
         (raw_data_url_forward_read, raw_data_url_reverse_read,
             raw_data_url_index_read, qiita_id, study_type, target_gene,
