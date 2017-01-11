@@ -9,9 +9,6 @@
 # ----------------------------------------------------------------------------
 
 
-from os.path import join, exists
-from os import makedirs
-import re
 import sys
 import getopt
 

@@ -47,10 +47,11 @@ class CheckDataIntegrity(unittest.TestCase):
                     db_dirs.append(path)
 
             for db_dir in db_dirs:
-                db_version_dirs = glob.glob(os.path.join(db_dir, '*'))
+                db_version_dirs = glob.glob(os.path.join(db_dir, '*', '*'))
                 self.assertTrue(len(db_version_dirs) > 0,
-                                "Database directory %r must have at least one "
-                                "database version-specific subdirectory." %
+                                "Database directory %r must have at least two "
+                                "database version-specific subdirectories: "
+                                "version number and OTU clustering percent" %
                                 db_dir)
 
                 for db_version_dir in db_version_dirs:
