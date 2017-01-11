@@ -250,13 +250,16 @@ class CheckDataIntegrity(unittest.TestCase):
                 len(taxonomy_ids),
                 error_msg_prefix + "taxonomy column values must be unique")
 
-            self.assertEqual(
-                taxonomy_ids,
-                expected_taxonomy_ids,
-                error_msg_prefix +
-                "taxonomy column values must match taxonomy column values in "
-                "%r (having the same order is not required)" %
-                expected_taxonomy_fp)
+            # Removing this code block: if species does not exist in db,
+            # identifier will not exist. Instead, database-identifiers.tsv
+            # should only contain sequences with species-level annotation
+            # self.assertEqual(
+            #    taxonomy_ids,
+            #    expected_taxonomy_ids,
+            #    error_msg_prefix +
+            #    "taxonomy column values must match taxonomy column values in "
+            #    "%r (having the same order is not required)" %
+            #    expected_taxonomy_fp)
 
 
 if __name__ == '__main__':
