@@ -47,10 +47,11 @@ class CheckDataIntegrity(unittest.TestCase):
                     db_dirs.append(path)
 
             for db_dir in db_dirs:
-                db_version_dirs = glob.glob(os.path.join(db_dir, '*'))
+                db_version_dirs = glob.glob(os.path.join(db_dir, '*', '*'))
                 self.assertTrue(len(db_version_dirs) > 0,
-                                "Database directory %r must have at least one "
-                                "database version-specific subdirectory." %
+                                "Database directory %r must have at least two "
+                                "database version-specific subdirectories: "
+                                "version number and OTU clustering percent" %
                                 db_dir)
 
                 for db_version_dir in db_version_dirs:
@@ -134,10 +135,11 @@ class CheckDataIntegrity(unittest.TestCase):
                 BAD_URLS.append((fp, raw_data_url_forward))
 
             raw_data_url_index = name_value_map['raw-data-url-index-read']
-            try:
-                urllib.request.urlopen(raw_data_url_index)
-            except urllib.error.URLError:
-                BAD_URLS.append((fp, raw_data_url_index))
+            if raw_data_url_index != 'NA':
+                try:
+                    urllib.request.urlopen(raw_data_url_index)
+                except urllib.error.URLError:
+                    BAD_URLS.append((fp, raw_data_url_index))
 
             raw_data_url_reverse = name_value_map['raw-data-url-reverse-read']
             if raw_data_url_reverse != 'NA':
@@ -249,13 +251,16 @@ class CheckDataIntegrity(unittest.TestCase):
                 len(taxonomy_ids),
                 error_msg_prefix + "taxonomy column values must be unique")
 
-            self.assertEqual(
-                taxonomy_ids,
-                expected_taxonomy_ids,
-                error_msg_prefix +
-                "taxonomy column values must match taxonomy column values in "
-                "%r (having the same order is not required)" %
-                expected_taxonomy_fp)
+            # Removing this code block: if species does not exist in db,
+            # identifier will not exist. Instead, database-identifiers.tsv
+            # should only contain sequences with species-level annotation
+            # self.assertEqual(
+            #    taxonomy_ids,
+            #    expected_taxonomy_ids,
+            #    error_msg_prefix +
+            #    "taxonomy column values must match taxonomy column values in "
+            #    "%r (having the same order is not required)" %
+            #    expected_taxonomy_fp)
 
 
 if __name__ == '__main__':

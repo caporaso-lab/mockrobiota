@@ -1,0 +1,12 @@
+name	value
+citation	doi: 10.1093/nar/gku1341
+qiita-id	NA
+raw-data-url-forward-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-16/mock-forward-read.fastq.gz
+raw-data-url-reverse-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-16/mock-reverse-read.fastq.gz
+raw-data-url-index-read	NA
+target-gene	16S
+target-subfragment	V4
+study-type	marker-gene
+sequencing-instrument	illumina-miseq
+physical-specimen-available	No
+contact-email	mail@melanieschirmer.com

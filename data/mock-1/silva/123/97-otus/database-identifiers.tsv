@@ -1,0 +1,21 @@
+D_0__Bacteria;D_1__Actinobacteria;D_2__Actinobacteria;D_3__Bifidobacteriales;D_4__Bifidobacteriaceae;D_5__Bifidobacterium;D_6__Bifidobacterium pseudocatenulatum	KJ803954.1.1386	KC160492.1.1392	JQ805696.1.1454
+D_0__Bacteria;D_1__Actinobacteria;D_2__Coriobacteriia;D_3__Coriobacteriales;D_4__Coriobacteriaceae;D_5__Collinsella;D_6__Collinsella intestinalis	KP233383.1.1429
+D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia;D_3__Bacteroidales;D_4__Bacteroidaceae;D_5__Bacteroides;D_6__Bacteroides finegoldii	AB222699.1.1485
+D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia;D_3__Bacteroidales;D_4__Bacteroidaceae;D_5__Bacteroides;D_6__Bacteroides ovatus	GU968168.1.1551	X83952.1.1395
+D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia;D_3__Bacteroidales;D_4__Bacteroidaceae;D_5__Bacteroides;D_6__Bacteroides thetaiotaomicron	JN084203.1.1405
+D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia;D_3__Bacteroidales;D_4__Bacteroidaceae;D_5__Bacteroides;D_6__Bacteroides uniformis str. 3978 T3 ii	JNHN01000175.148172.149576	JNHN01000180.20031.21416
+D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia;D_3__Bacteroidales;D_4__Bacteroidaceae;D_5__Bacteroides;D_6__Bacteroides vulgatus	JN084209.1.1374
+D_0__Bacteria;D_1__Bacteroidetes;D_2__Bacteroidia;D_3__Bacteroidales;D_4__Bacteroidaceae;D_5__Bacteroides;D_6__Bacteroides xylanisolvens	AM230650.1.1368
+D_0__Bacteria;D_1__Firmicutes;D_2__Bacilli;D_3__Lactobacillales;D_4__Streptococcaceae;D_5__Streptococcus;D_6__Streptococcus infantarius subsp. infantarius	KC699206.1.1387	HQ662525.1.1386	JQ754456.1.1405	KC699128.1.1426
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Clostridiaceae 1;D_5__Clostridium sensu stricto 18;D_6__Clostridium sporogenes	DQ680019.1.1418	AY321655.1.1585
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Family XI;D_5__Anaerococcus;D_6__Anaerococcus hydrogenalis	D14140.1.1375
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Lachnospiraceae;D_5__Dorea;D_6__Dorea formicigenerans ATCC 27755	AAXA02000007.1.1294
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Lachnospiraceae;D_5__Dorea;D_6__Dorea longicatena	AJ132842.30.1345
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Lachnospiraceae;D_5__Lachnoclostridium 5;D_6__[Clostridium] saccharolyticum	FJ957875.1.1447	AY604565.1.1311
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Lachnospiraceae;D_5__Tyzzerella 4;D_6__Tyzzerella nexilis	DM464569.1.1397
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Ruminococcaceae;D_5__Faecalibacterium;D_6__Faecalibacterium prausnitzii	HQ457028.1.1424	JN037416.1.1278
+D_0__Bacteria;D_1__Firmicutes;D_2__Clostridia;D_3__Clostridiales;D_4__Ruminococcaceae;D_5__Ruminiclostridium 9;D_6__[Clostridium] leptum	HW313913.1.1460	HW313914.1.1485
+D_0__Bacteria;D_1__Proteobacteria;D_2__Gammaproteobacteria;D_3__Enterobacteriales;D_4__Enterobacteriaceae;D_5__Edwardsiella;D_6__Edwardsiella tarda	AF053975.1.1346	KF704685.1.1394	KC884662.1.1426	HQ611038.1.1415	AY775313.1.1414	HM003641.1.1456	JX866954.1.1294	DQ233654.1.1460	EF371905.1.1444
+D_0__Bacteria;D_1__Proteobacteria;D_2__Gammaproteobacteria;D_3__Enterobacteriales;D_4__Enterobacteriaceae;D_5__Enterobacter;D_6__Enterobacter cancerogenus	HQ407289.1.1339	KJ826607.1.1520	HQ407294.1.1349	JN969335.1.1463	FM210031.1.1447	KC834378.1.1334	JQ682639.1.1465	KF817792.1.1394	JX173560.1.1359
+D_0__Bacteria;D_1__Proteobacteria;D_2__Gammaproteobacteria;D_3__Enterobacteriales;D_4__Enterobacteriaceae;D_5__Escherichia-Shigella;D_6__Escherichia coli	LN558634.1.1331	AY776275.1.1463	KF792059.1.1489	KC254646.1.1485	KM504998.1.1406	JJNT01000040.111042.112820	CP007394.148.1706	EF025911.1.1504	HF584703.1.1466	GU594295.1.1477	LM995745.228347.229599	CP009106.160499.162042	HQ219945.1.1457	AB480753.1.1508	KC504012.1.1473	LN558644.1.1476	CP007394.3516165.3517696	LN558643.1.1484	FJ463818.1.1541	HQ857765.1.1444	JN969333.1.1531	GQ273521.1.1399	JSPY01000020.293.1691	GU594318.1.1473	FJ950694.1.1472	KC504010.1.1476	KF500595.1.1479	KC254645.1.1467	CP007393.191798.193312	FJ463821.1.1502	HF584706.1.1465	CCVR01000230.143318.144957	GQ222403.1.1443
+D_0__Bacteria;D_1__Proteobacteria;D_2__Gammaproteobacteria;D_3__Enterobacteriales;D_4__Enterobacteriaceae;D_5__Providencia;D_6__Providencia alcalifaciens	HQ407249.1.1463	KC210832.1.1407
