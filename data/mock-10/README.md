@@ -7,12 +7,9 @@ Previously called dataset F2 in [Bokulich et al. 2015](https://dx.doi.org/10.728
 #Known Issues / Notes
 
 These barcode reads contain golay barcodes, and the mapping barcodes need to be reverse-complemented to match the reads. Run in qiime-1 using the following command:
-``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz --rev_comp_barcodes``
+``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz --rev_comp_mapping_barcodes``
 
 Note that the barcode reads contain fake QUAL scores, as the sequence data were originally delivered in an older format with index reads contained in the header lines without QUAL scores. Forward and reverse reads contain true QUAL scores.
 
 @mdeleeuw reports in [issue-27](https://github.com/caporaso-lab/mockrobiota/issues/27) that:
->the forward reads start 55bp upstream of the ITS sequences in Unite. As a consequence, forward reads fail closed reference picking and are underrepresented in taxonomic assignments for open reference and de novo picking. This has not be independently verified, but we recommend that users trim forward and reverse primers (and outlying regions) from sequencing reads as a standard procedure for marker-gene sequencing data.
-
-@mdeleeuw also reports that the index reads lack the barcode sequence in the fastq header and the fake QUAL scores entered for the index read are phred-33 whereas the sequence qualities are phred-64. These must added be prior to processing with split_libraries_fastq.py (if processing these reads in QIIME-1), and this can be done with the following bash command:
-``gunzip -c mock-index-read.fastq.gz | paste - - - - | awk '{print $1"#"$2"/1" ; print $2"\n+\nYYYYYYYYYYYY"}' | gzip -c > mock-index-read.corrected.fastq.gz``
+>the forward reads start 55bp upstream of the ITS sequences in Unite. As a consequence, forward reads fail closed reference picking and are underrepresented in taxonomic assignments for open reference and de novo picking. This is because the standard UNITE database has internal ITS regions extracted; the "developer" version included in the standard UNITE database release 7.1 contains the full ITS reads, which contain these primers and should work with closed-reference OTU picking (though mockrobiota developers have not independently verified this).

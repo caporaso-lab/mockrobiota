@@ -10,8 +10,4 @@ The original QUAL scores for the index/barcode reads were not recovered, and thu
 
 Note:
 These barcode reads contain golay barcodes, and the mapping barcodes need to be reverse-complemented to match the reads. Run in qiime-1 using the following command:
-``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz --rev_comp_barcodes``
-
-@mdeleeuw notes: The index reads lack the barcode sequence in the fastq header. The following command is required prior to calling join_paired_ends.py and/or split_libraries_fastq.py (if processing these reads in QIIME-1):
-``gunzip -c mock-index-read.fastq.gz | paste - - - - | awk '{print $1" "$2$3 ; print $3; print $4; print $5}' | gzip -c > mock-index-read.corrected.fastq.gz``
-
+``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz --rev_comp_mapping_barcodes``

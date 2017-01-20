@@ -6,4 +6,5 @@ Previously called dataset-1 in [Bokulich et al. 2013](https://dx.doi.org/10.1038
 
 #Known Issues / Notes
 
-None reported September 2016
+These barcode reads contain golay barcodes, and the mapping barcodes need to be reverse-complemented to match the reads. Run in qiime-1 using the following command:
+``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz --rev_comp_mapping_barcodes``
