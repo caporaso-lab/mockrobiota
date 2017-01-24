@@ -1,5 +1,5 @@
 title: Mockrobiota
-description: A public resource for microbiome bioinformatics benchmarking.
+description: A public resource for microbiome bioinformatics benchmarking using artificially constructed (i.e., mock) communities.
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-tactile
