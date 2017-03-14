@@ -1,9 +1,9 @@
 name	value
 citation	doi:10.1038/nmeth.2276
 qiita-id	10808
-raw-data-url-forward-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-11/mock-forward-read.fastq.gz
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-11/mock-forward-read.fastq.gz
 raw-data-url-reverse-read	NA
-raw-data-url-index-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-11/mock-index-read.fastq.gz
+raw-data-url-index-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-11/mock-index-read.fastq.gz
 target-gene	18S
 target-subfragment	18S
 study-type	marker-gene

@@ -1,9 +1,9 @@
 name	value
 citation	https://dx.doi.org/10.7287/peerj.preprints.934v2
 qiita-id	1975
-raw-data-url-forward-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-10/mock-forward-read.fastq.gz
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-10/mock-forward-read.fastq.gz
 raw-data-url-reverse-read	NA
-raw-data-url-index-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-10/mock-index-read.fastq.gz
+raw-data-url-index-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-10/mock-index-read.fastq.gz
 target-gene	ITS
 target-subfragment	ITS1
 study-type	marker-gene

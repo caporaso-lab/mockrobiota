@@ -8,7 +8,7 @@ Previously called dataset-2 in [Bokulich et al. 2013](https://dx.doi.org/10.1038
 
 Note:
 These barcode reads contain golay barcodes, and the mapping barcodes are not reverse-complemented. Run in qiime-1 using the following command:
-``split_libraries_fastq.py -i mock-forward-read.fastq.gz -o split_libraries -m sample-metadata.tsv -b mock-index-read.fastq.gz``
+``split_libraries_fastq.py -i mock-forward-read.fastq -m sample-metadata.tsv -o out --store_demultiplexed_fastq -b mock-index-read.fastq --rev_comp_mapping_barcodes --rev_comp_barcode --phred_offset 33``
 
 The original QUAL scores for the index/barcode reads were not recovered, and thus mock-index-read.fastq.gz contains artificial index/barcode QUAL scores. QUAL scores from all other files are original.
 

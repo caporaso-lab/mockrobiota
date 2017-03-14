@@ -1,0 +1,2 @@
+SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
+mock.1	NA	CCGTGCCAGCMGCCGCGGTAA	GGACTACHVGGGTWTCTAAT	515f-806r	RUN1__sample:E_primerset:515F806R_polymeraseKOD_replicate:1

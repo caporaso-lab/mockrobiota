@@ -1,0 +1,2 @@
+SampleID	BarcodeSequence	LinkerPrimerSequence	ReversePrimer	PrimerName	Description
+mock.1	NA	CCGTGCCAGCMGCCGCGGTAA	GGACTACHVGGGTWTCTAAT	515f-806r	DI(KAPA) staggered mock community

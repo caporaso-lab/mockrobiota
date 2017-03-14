@@ -1,9 +1,9 @@
 name	value
 citation	doi:10.1038/nmeth.2276
 qiita-id	1688
-raw-data-url-forward-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-2/mock-forward-read.fastq.gz
-raw-data-url-reverse-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-2/mock-reverse-read.fastq.gz
-raw-data-url-index-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-2/mock-index-read.fastq.gz
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-2/mock-forward-read.fastq.gz
+raw-data-url-reverse-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-2/mock-reverse-read.fastq.gz
+raw-data-url-index-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-2/mock-index-read.fastq.gz
 target-gene	16S
 target-subfragment	V4
 study-type	marker-gene

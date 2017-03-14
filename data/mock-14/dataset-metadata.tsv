@@ -1,8 +1,8 @@
 name	value
 citation	doi:10.1128/AEM.01043-13
 qiita-id	NA
-raw-data-url-forward-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-14/mock-forward-read.fastq.gz
-raw-data-url-reverse-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-14/mock-reverse-read.fastq.gz
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-14/mock-forward-read.fastq.gz
+raw-data-url-reverse-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-14/mock-reverse-read.fastq.gz
 raw-data-url-index-read	NA
 target-gene	16S
 target-subfragment	V4

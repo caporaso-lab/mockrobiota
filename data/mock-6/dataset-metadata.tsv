@@ -1,9 +1,9 @@
 name	value
 citation	doi: 10.1073/pnas.1000080107
 qiita-id	721+722
-raw-data-url-forward-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-6/mock-forward-read.fastq.gz
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-6/mock-forward-read.fastq.gz
 raw-data-url-reverse-read	NA
-raw-data-url-index-read	https://dl.dropboxusercontent.com/u/2868868/data/mockrobiota/mock-6/mock-index-read.fastq.gz
+raw-data-url-index-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-6/mock-index-read.fastq.gz
 target-gene	16S
 target-subfragment	V4
 study-type	marker-gene
