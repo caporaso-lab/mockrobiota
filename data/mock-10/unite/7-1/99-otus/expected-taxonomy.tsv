@@ -2,7 +2,6 @@ Taxonomy	Mock.1	Mock.2	Mock.3
 k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Saccharomycetaceae;g__Zygosaccharomyces;s__Zygosaccharomyces_rouxii	0.0625000000	0.0625000000	0.0625000000
 k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Dipodascaceae;g__Dipodascus;s__Dipodascus_geotrichum	0.2500000000	0.2500000000	0.2500000000
 k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Saccharomycetales_fam_Incertae_sedis;g__Candida;s__	0.1250000000	0.1250000000	0.1250000000
-k__Fungi;p__Ascomycota;c__Eurotiomycetes;o__Eurotiales;f__Trichocomaceae;g__Penicillium;s__Penicillium_crystallinum	0.0625000000	0.0625000000	0.0625000000
 k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Saccharomycetaceae;g__Kluyveromyces;s__Kluyveromyces_lactis	0.0625000000	0.0625000000	0.0625000000
 k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Pichiaceae;g__Pichia;s__	0.0625000000	0.0625000000	0.0625000000
 k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Saccharomycetales_fam_Incertae_sedis;g__Debaryomyces;s__Debaryomyces_hansenii	0.0625000000	0.0625000000	0.0625000000
@@ -10,4 +9,4 @@ k__Fungi;p__Ascomycota;c__Saccharomycetes;o__Saccharomycetales;f__Saccharomyceta
 k__Fungi;p__Ascomycota;c__Eurotiomycetes;o__Eurotiales;f__Trichocomaceae;g__Penicillium;s__Penicillium_commune	0.0625000000	0.0625000000	0.0625000000
 k__Fungi;p__Ascomycota;c__Sordariomycetes;o__Microascales;f__Microascaceae;g__Scopulariopsis;s__	0.0625000000	0.0625000000	0.0625000000
 k__Fungi;p__Ascomycota;c__Sordariomycetes;o__Hypocreales;f__Nectriaceae;g__Fusarium;s__	0.0625000000	0.0625000000	0.0625000000
-k__Fungi;p__Ascomycota;c__Eurotiomycetes;o__Eurotiales;f__Trichocomaceae;g__Penicillium;s__	0.0625000000	0.0625000000	0.0625000000
+k__Fungi;p__Ascomycota;c__Eurotiomycetes;o__Eurotiales;f__Trichocomaceae;g__Penicillium;s__	0.1250000000	0.1250000000	0.1250000000
