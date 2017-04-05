@@ -1,0 +1,12 @@
+name	value
+citation	http://dx.doi.org/10.1111/j.1574-6941.2012.01437.x
+qiita-id	NA
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-26/mock-forward-read.fastq.gz
+raw-data-url-reverse-read	NA
+raw-data-url-index-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-26/mock-index-read.fastq.gz
+target-gene	ITS
+target-subfragment	ITS
+study-type	marker-gene
+sequencing-instrument	gx-flx-titanium
+physical-specimen-available	No
+contact-email	bjorn.lindahl@slu.se

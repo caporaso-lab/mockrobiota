@@ -1,0 +1,12 @@
+name	value
+citation	http://dx.doi.org/10.1128/AEM.02576-16
+qiita-id	NA
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-24/mock-forward-read.fastq.gz
+raw-data-url-reverse-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-24/mock-reverse-read.fastq.gz
+raw-data-url-index-read	NA
+target-gene	ITS
+target-subfragment	ITS2
+study-type	marker-gene
+sequencing-instrument	illumina-miseq
+physical-specimen-available	No
+contact-email	fflt@unm.edu
