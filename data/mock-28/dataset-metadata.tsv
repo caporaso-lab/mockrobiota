@@ -1,0 +1,12 @@
+name	value
+citation	NA
+qiita-id	NA
+raw-data-url-forward-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-28/mock-forward-read.fastq.gz
+raw-data-url-reverse-read	https://s3-us-west-2.amazonaws.com/mockrobiota/latest/mock-28/mock-reverse-read.fastq.gz
+raw-data-url-index-read	NA
+target-gene	nifH
+target-subfragment	19-473 relative to A. vinelandii nifH (Genbank ACCN# M20568)
+study-type	marker-gene
+sequencing-instrument	MiSeq
+physical-specimen-available	Yes
+contact-email	woebken@microbial-ecology.net
